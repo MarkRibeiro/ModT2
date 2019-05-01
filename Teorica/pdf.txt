@@ -1,0 +1,24 @@
+﻿Tabuleiro:
+O tabuleiro será representado com uma lista duplamente encadeada genérica com cabeça aonde cada nó da lista representará uma casa do tabuleiro. Como cada casa pode armazenar mais de uma peça, cada nó da lista conterá uma lista. 
+
+***Peça:
+Struct que armazena cor ... nesse modulo deve ser possível criar e destruir uma peça. 
+
+DadoPontos:
+Modulo que determina, a partir das informações recebidas, o jogador que pode dobrar o valor da partida no momento. Além disso esse módulo pode mostrar o valor do dado de apostas.
+
+PeçasCapturadas (BAR):
+Modulo composto por duas listas duplamente encadeadas genéricas com cabeça onde cada lista armazena as peças capturadas de cada jogador.
+
+PeçasFinalizadas:
+Modulo composto por duas listas duplamente encadeadas genéricas com cabeça onde cada lista armazena as peças retiradas de cada jogador
+
+Dado:
+Modulo que gera um número aleatório variando entre 1 e 6. Ele pode ser chamado mais de uma vez, de acordo com a necessidade.
+
+Jogo:
+Modulo que concilia o funcionamento dos demais, informando a pontuação do jogo. Permite o salvamento e recuperação de jogos em um arquivo .txt destinado para guardar essas informações, e a partir das regras do gamão gerencia o funcionamento do jogo disponibilizando as ações possíveis para os jogadores.
+
+
+Legenda:
+*** Incompleto
