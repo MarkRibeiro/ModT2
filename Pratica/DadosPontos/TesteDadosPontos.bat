@@ -1,1 +1,0 @@
-TRAB2-3.exe /sTesteDadosPontos.script /lTesteDadosPontos.log
