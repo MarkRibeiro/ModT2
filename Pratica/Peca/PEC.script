@@ -13,6 +13,3 @@
 
 ==testa destruirpeca com peça existente
 =destruirpeca 0 0
-
-==testa destruitpeca com peça não existente
-=destruirpeca 30 0

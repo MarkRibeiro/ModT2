@@ -1,1 +1,1 @@
-TesteDadosPontos.exe /sTesteDadosPontos.script /lTesteDadosPontos.log
+TRAB2-3.exe /sTesteDadosPontos.script /lTesteDadosPontos.log

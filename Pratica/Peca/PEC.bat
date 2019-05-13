@@ -1,1 +1,1 @@
-Trab2 /sPEC.script > PEC_Saida.log
+TRAB2-2.exe /sPEC.script /lPEC.log
