@@ -1,7 +1,7 @@
 
 !!! Inicio dos testes
 !!!      Construto sob teste: TesteDadosPontos.exe
-!!!      Script de teste:     TesteDP.script
+!!!      Script de teste:     TesteDadosPontos.script
 
     1  == Verifica todas funcoes sem criar dados pontos
     9  == Cria DadosPontos e id de jogador errado é passado
