@@ -1,0 +1,1 @@
+T2M.exe /sTestaTabuleiro.script /lTestaTabuleiro.log
