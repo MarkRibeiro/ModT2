@@ -1,8 +1,36 @@
+/***************************************************************************
+*
+*  $MCD Módulo de definição: Módulo DadosPontos
+*
+*  Arquivo gerado:              TestaDadosPontos.C
+*  Letras identificadoras:      DP
+*
+*  Projeto: Disciplina INF 1301
+*  Gestor:  DI/PUC-Rio
+*  Autores: cgm - Caio Graça Melo
+*			mr - Mark Ribeiro
+*			lb - Lucca Buffara
+*
+*  $HA Histórico de evolução:
+*     Versão  Autor    Data    Observações
+*       1.00   lb   8/05/2019 Começo da implementacao
+*       2.00   lb   10/05/2019 Final do desenvolvimento
+*
+*  $ED Descrição do módulo
+*     Este módulo implementa um lançamento o DadosPontos
+*
+***************************************************************************/
 #include<stdio.h>
 #include<stdlib.h>
 
 typedef struct dadosPontos DadosPontos;
 
+/***********************************************************************
+*
+*  $TC Tipo de dados: DP Condicoes de retorno
+*
+*
+***********************************************************************/
 typedef enum {
 
 	DP_CondRetOk = 0,
@@ -21,26 +49,108 @@ typedef enum {
 	/*Valor maximo do dado atingido*/
 
 	DP_CondRetFaltouMemoria = 5
-	/* Faltou mem�ria ao alocar dados */
+	/* Faltou memória ao alocar dados */
 
 } DP_tpCondRet;
 
-//Inicializa DadosPontos
+/***********************************************************************
+*
+*  $FC Função: DP Criar DadosPontos
+*
+*  $ED Descrição da função
+*     Inicializa DadosPontos
+*
+*  $FV Valor retornado
+*     DP_CondRetOK
+*     DP_CondRetFaltouMemoria
+*
+***********************************************************************/
 DP_tpCondRet criaDadosPontos(void);
 
-//Dobra valor do DadosPontos, necessita o id do jogador que esta dobrando a pontuacao
+/***********************************************************************
+*
+*  $FC Função: DP Dobrar 
+*
+*  $ED Descrição da função
+*     Dobra o valor da partida e troca o ultimo jogador para o jogador que pediu a dobra
+*
+*  $FV Valor retornado
+*     DP_CondRetOk
+*     DP_CondRetJogadorInvalido
+*	  DP_CondRetJogadorNaoPodeDobrar
+*	  DP_CondRetValorMaximoDado
+*
+***********************************************************************/
 DP_tpCondRet dobraValor(int jogador);
 
-//Adciona valor a pontuacao do jogador
+/***********************************************************************
+*
+*  $FC Função: DP Modifica pontos 
+*
+*  $ED Descrição da função
+*     Incrementa a pontuacao de um dado jogador
+*
+*  $FV Valor retornado
+*     DP_CondRetOk
+*	  DP_CondRetNaoExiste
+*     DP_CondRetJogadorInvalido
+*
+***********************************************************************/
 DP_tpCondRet modificaPontos(int valor, int jogador);
 
-//Retorna a pontuacao do jogador
+/***********************************************************************
+*
+*  $FC Função: DP Ler pontos
+*
+*  $ED Descrição da função
+*     Retorna a pontuacao de um dado jogador
+*
+*  $FV Valor retornado
+*     DP_CondRetOk
+*	  DP_CondRetNaoExiste
+*     DP_CondRetJogadorInvalido
+*
+***********************************************************************/
 DP_tpCondRet lerPontos(int jogador, int *val);
 
-//Retorna o valor atual do multiplicador dos pontos
+/***********************************************************************
+*
+*  $FC Função: DP Ler valor DadosPontos
+*
+*  $ED Descrição da função
+*     Retorna o valor atual do DadosPontos
+*
+*  $FV Valor retornado
+*     DP_CondRetOk
+*	  DP_CondRetNaoExiste
+*
+***********************************************************************/
 DP_tpCondRet lerValorDadosPontos(int *val);
 
-//Retorna o ID do ultimo jogador que dobrou
+/***********************************************************************
+*
+*  $FC Função: DP Ler ultimo jogador
+
+*  $ED Descrição da função
+*     Retorna o id do ultimo jogador a dobrar
+*
+*  $FV Valor retornado
+*     DP_CondRetOk
+*	  DP_CondRetNaoExiste
+*
+***********************************************************************/
 DP_tpCondRet lerUltimoJogador(int *val);
 
+/***********************************************************************
+*
+*  $FC Função: DP destroi DadosPontos
+
+*  $ED Descrição da função
+*     Libera memoria alocada
+*
+*  $FV Valor retornado
+*     DP_CondRetOk
+*	  DP_CondRetNaoExiste
+*
+***********************************************************************/
 DP_tpCondRet destroiDadosPontos(void);
