@@ -1,0 +1,1 @@
+TesteDadosPontos.exe /sTesteDadosPontos.script /lTesteDadosPontos.log
