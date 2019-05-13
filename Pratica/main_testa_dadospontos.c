@@ -2,13 +2,19 @@
 
 int main()
 {
-	DadosPontos *dp;
+	int val = 0;
+	
+	criaDadosPontos();
+	
+	dobraValor(1);
+	
+	printf("Valor do mult: %d\n", dobraValor(2));
 
-	dp = criaDadosPontos();
-
-	dobraValor(1, dp);
-
-	printf("Valor do mult: %d\n", lerValorDadosPontos(dp));
+	//printf("Valor do mult: %d\n", dobraValor(1));	
+	
+	lerValorDadosPontos(&val);
+	
+	printf("Valor do mult: %d\n", val);
 
 	return 0;
 }

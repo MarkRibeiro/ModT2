@@ -1,5 +1,6 @@
 #include "DadosPontos.h"
 
+
 struct dadosPontos {
 
 	//ID do ultimo jogador (1 ou 2) que requisitou a dobra dos pontos
@@ -14,10 +15,22 @@ struct dadosPontos {
 
 };
 
-DadosPontos* criaDadosPontos() 
+//Dado encapsulado
+static DadosPontos * dp = NULL;
+
+DP_tpCondRet criaDadosPontos(void)
 {
-	DadosPontos *dp = (DadosPontos*)malloc(sizeof(DadosPontos));
-	
+	if (dp != NULL) {
+		destroiDadosPontos();
+	}
+
+	dp = (DadosPontos *)malloc(sizeof(DadosPontos));
+
+	if (dp == NULL)
+	{
+		return DP_CondRetFaltouMemoria;
+	} 		
+			
 	//Primeira 'dobrada' pode ser feita por qualquer jogador entao ultimo_jogador inicializa com 0
 	dp->ultimo_jogador = 0;
 
@@ -28,15 +41,20 @@ DadosPontos* criaDadosPontos()
 	dp->pontuacaoJogador1 = 0;
 	dp->pontuacaoJogador2 = 0;
 	
-	return dp;
+	return DP_CondRetOk;
 }
 
-int dobraValor(int jogador, DadosPontos *dp)
+DP_tpCondRet dobraValor(int jogador)
 {
+	if (dp == NULL)
+	{
+		return DP_CondRetFaltouMemoria;
+	} 		
+	
 	//Verifica se ID do jogador é valido
 	if (jogador != 1 && jogador != 2) {
 		printf("ID do jogador invalido! Deve ser 1 ou 2\n");
-		return 1;
+		return DP_CondRetJogadorInvalido;
 	}
 
 	//Primeira 'dobrada'
@@ -45,61 +63,79 @@ int dobraValor(int jogador, DadosPontos *dp)
 		dp->mult = 2;
 		dp->ultimo_jogador = jogador;
 
-		return 0;
+		return DP_CondRetOk;
 	}
 
 	//Verifica se jogador pode dobrar os pontos
 	if (dp->ultimo_jogador == jogador) {
 		printf("Este jogador não pode dobrar a pontuacao!\n");
-		return 2;
+		return DP_CondRetJogadorNaoPodeDobrar;
 	}
 	
 	//Verifica se valor do multiplicador é maximo
 	if (dp->mult == 64) {
 		printf("Valor maximo do dado atingido!\n");
-		return 3;
+		return DP_CondRetValorMaximoDado;
 	}
 
 	dp->ultimo_jogador = jogador;
 	dp->mult = dp->mult * 2;
 
-	return 0;
+	return DP_CondRetOk;
 }
 
-int lerPontos(DadosPontos *dp, int jogador)
+DP_tpCondRet lerPontos(int jogador, int *val)
 {
+	if (dp == NULL) {
+		return DP_CondRetNaoExiste;
+	}
+
 	//Verifica se ID do jogador é valido
 	if (jogador != 1 && jogador != 2) {
 		printf("ID do jogador invalido! Deve ser 1 ou 2\n");
-		return -1;
+		return DP_CondRetJogadorInvalido;
 	}
 
 	if (jogador == 1) {
-		return dp->pontuacaoJogador1;
+		*val = dp->pontuacaoJogador1;
 	}
 	else
 	{
-		return dp->pontuacaoJogador2;
+		*val = dp->pontuacaoJogador2;
 	}
 
+	return DP_CondRetOk;
+
 }
 
-int lerValorDadosPontos(DadosPontos *dp) 
+DP_tpCondRet lerValorDadosPontos(int *val)
 {
-	return dp->mult;
+	if (dp == NULL) {
+		return DP_CondRetNaoExiste;
+	}
+	*val = dp->mult;
+	return DP_CondRetOk;
 }
 
-int lerUltimoJogador(DadosPontos *dp) 
+DP_tpCondRet lerUltimoJogador(int *val)
 {
-	return dp->ultimo_jogador;
+	if (dp == NULL) {
+		return DP_CondRetNaoExiste;
+	}
+	*val = dp->ultimo_jogador;
+	return DP_CondRetOk;
 }
 
-int modificaPontos(int valor, int jogador, DadosPontos *dp)
+DP_tpCondRet modificaPontos(int valor, int jogador)
 {
+	if (dp == NULL) {
+		return DP_CondRetNaoExiste;
+	}
+
 	//Verifica se ID do jogador é valido
 	if (jogador != 1 && jogador != 2) {
 		printf("ID do jogador invalido! Deve ser 1 ou 2\n");
-		return 1;
+		return DP_CondRetJogadorInvalido;
 	}
 
 	if (jogador == 1) {
@@ -110,6 +146,14 @@ int modificaPontos(int valor, int jogador, DadosPontos *dp)
 		dp->pontuacaoJogador2 = dp->pontuacaoJogador2 + valor;
 	}
 
-	return 0;
+	return DP_CondRetOk;
 	
+}
+
+void destroiDadosPontos() 
+{
+	if (dp == NULL) {
+		return DP_CondRetNaoExiste;
+	}
+	free(dp);
 }
