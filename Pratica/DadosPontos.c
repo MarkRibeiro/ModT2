@@ -1,6 +1,5 @@
 #include "DadosPontos.h"
 
-
 struct dadosPontos {
 
 	//ID do ultimo jogador (1 ou 2) que requisitou a dobra dos pontos
@@ -29,8 +28,8 @@ DP_tpCondRet criaDadosPontos(void)
 	if (dp == NULL)
 	{
 		return DP_CondRetFaltouMemoria;
-	} 		
-			
+	}
+
 	//Primeira 'dobrada' pode ser feita por qualquer jogador entao ultimo_jogador inicializa com 0
 	dp->ultimo_jogador = 0;
 
@@ -40,7 +39,7 @@ DP_tpCondRet criaDadosPontos(void)
 	//Pontuacao de ambos jogadores incializa com 0
 	dp->pontuacaoJogador1 = 0;
 	dp->pontuacaoJogador2 = 0;
-	
+
 	return DP_CondRetOk;
 }
 
@@ -48,9 +47,9 @@ DP_tpCondRet dobraValor(int jogador)
 {
 	if (dp == NULL)
 	{
-		return DP_CondRetFaltouMemoria;
-	} 		
-	
+		return DP_CondRetNaoExiste;
+	}
+
 	//Verifica se ID do jogador é valido
 	if (jogador != 1 && jogador != 2) {
 		printf("ID do jogador invalido! Deve ser 1 ou 2\n");
@@ -71,7 +70,7 @@ DP_tpCondRet dobraValor(int jogador)
 		printf("Este jogador não pode dobrar a pontuacao!\n");
 		return DP_CondRetJogadorNaoPodeDobrar;
 	}
-	
+
 	//Verifica se valor do multiplicador é maximo
 	if (dp->mult == 64) {
 		printf("Valor maximo do dado atingido!\n");
@@ -86,7 +85,8 @@ DP_tpCondRet dobraValor(int jogador)
 
 DP_tpCondRet lerPontos(int jogador, int *val)
 {
-	if (dp == NULL) {
+	if (dp == NULL)
+	{
 		return DP_CondRetNaoExiste;
 	}
 
@@ -139,7 +139,7 @@ DP_tpCondRet modificaPontos(int valor, int jogador)
 	}
 
 	if (jogador == 1) {
-		dp->pontuacaoJogador1 =  dp->pontuacaoJogador1 + valor;
+		dp->pontuacaoJogador1 = dp->pontuacaoJogador1 + valor;
 	}
 	else
 	{
@@ -147,13 +147,14 @@ DP_tpCondRet modificaPontos(int valor, int jogador)
 	}
 
 	return DP_CondRetOk;
-	
+
 }
 
-void destroiDadosPontos() 
+DP_tpCondRet destroiDadosPontos()
 {
 	if (dp == NULL) {
 		return DP_CondRetNaoExiste;
 	}
 	free(dp);
+	return DP_CondRetOk;
 }

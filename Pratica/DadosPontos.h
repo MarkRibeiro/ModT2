@@ -43,4 +43,4 @@ DP_tpCondRet lerValorDadosPontos(int *val);
 //Retorna o ID do ultimo jogador que dobrou
 DP_tpCondRet lerUltimoJogador(int *val);
 
-void destroiDadosPontos(void);
+DP_tpCondRet destroiDadosPontos(void);
