@@ -93,11 +93,12 @@ typedef struct tgTabuleiro
 *
 *  Função: TAB  &Arruma tabuleiro
 *  ****/
-
+   /*Função auxiliar do Arruma Tabuleiro*/
    void Excluir(void*ponteiro)
    {
 	   free(ponteiro);
    }
+   /*Fim Função auxiliar do Arruma Tabuleiro*/
 
    TAB_tpCondRet TAB_ArrumarTabuleiro( void )
    {
