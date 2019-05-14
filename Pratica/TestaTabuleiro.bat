@@ -1,1 +1,1 @@
-T2M.exe /sTestaTabuleiro.script /lTestaTabuleiro.log
+TRAB2-1.exe /sTestaTabuleiro.script /lTestaTabuleiro.log

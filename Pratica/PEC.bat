@@ -1,0 +1,1 @@
+Trab2 /sPEC.script > PEC_Saida.log
