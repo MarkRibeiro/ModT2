@@ -1,12 +1,8 @@
 /***************************************************************************
-*
-*  $MCD Módulo de definição: Módulo dado
+*  $MCI Módulo de implementação: Módulo dado
 *
 *  Arquivo gerado:              DADO.C
 *  Letras identificadoras:      DAD
-*
-*  Nome da base de software:    Exemplo de teste automatizado
-*  Arquivo da base de software: D:\AUTOTEST\PROJETOS\SIMPLES.BSW
 *
 *  Projeto: Disciplina INF 1301
 *  Gestor:  DI/PUC-Rio
@@ -44,4 +40,3 @@
 	}  /* Fim função: DAD Joga dados */
 
 /********** Fim do módulo de implementação: Módulo dado **********/
-

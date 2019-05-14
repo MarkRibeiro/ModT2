@@ -1,5 +1,4 @@
 /***************************************************************************
-*
 *  $MCD Módulo de definição: Módulo dado
 *
 *  Arquivo gerado:              TESTADADO.C
@@ -79,7 +78,7 @@ int dados[4] = {NULL, NULL, NULL, NULL};
 
          if ( strcmp( ComandoTeste , JOGAR_DAD_CMD ) == 0 )
          {
-            NumLidos = LER_LerParametros( "i" , &CondRetEsperada ) ;
+            NumLidos = LER_LerParametros( "i", &CondRetEsperada ) ;
 
             if ( NumLidos != 1 )
             {

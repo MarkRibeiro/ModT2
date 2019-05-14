@@ -1,12 +1,8 @@
 /***************************************************************************
-*
 *  $MCD Módulo de definição: Módulo peça
 *
 *  Arquivo gerado:              PECA.H
 *  Letras identificadoras:      PEC
-*
-*  Nome da base de software:    Exemplo de teste automatizado
-*  Arquivo da base de software: D:\AUTOTEST\PROJETOS\SIMPLES.BSW
 *
 *  Projeto: Disciplina INF 1301
 *  Gestor:  DI/PUC-Rio
@@ -21,8 +17,6 @@
 *  $ED Descrição do módulo
 *     Este módulo implementa um conjunto simples de funções para criar, 
 *     destruir ou obter a cor de uma peça.
-*     A árvore possui uma cor que sera caracteristica de um jogador
-*     em especifico.
 *
 ***************************************************************************/
 

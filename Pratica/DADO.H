@@ -1,12 +1,8 @@
 /***************************************************************************
-*
 *  $MCD Módulo de definição: Módulo dado
 *
 *  Arquivo gerado:              DADO.H
 *  Letras identificadoras:      DAD
-*
-*  Nome da base de software:    Exemplo de teste automatizado
-*  Arquivo da base de software: D:\AUTOTEST\PROJETOS\SIMPLES.BSW
 *
 *  Projeto: Disciplina INF 1301
 *  Gestor:  DI/PUC-Rio
