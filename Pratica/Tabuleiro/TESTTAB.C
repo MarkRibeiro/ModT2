@@ -133,7 +133,7 @@
 
 			} /* fim ativa: Testar TAB Criar tabuleiro */
 
-		/* Testar TAB Inserir Peça na Casa */
+		/* Testar TAB Arrumar Peça na Casa */
 
 			else if ( strcmp( ComandoTeste , INSERE_CMD ) == 0 )
 			{
@@ -150,7 +150,7 @@
 				return TST_CompararInt( CondRetEsperada , CondRetObtido ,
 												"Retorno errado ao inserir peça na casa dada." ) ;
 
-			} /* fim ativa: Testar TAB Inserir Peça na Casa */
+			} /* fim ativa: Testar TAB Arrumar Peça na Casa */
 
 			/* Testar TAB Move Peça */
 

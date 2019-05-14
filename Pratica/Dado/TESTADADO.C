@@ -20,7 +20,7 @@
 *  $EIU Interface com o usuário pessoa
 *     Comandos de teste específicos para testar o módulo árvore:
 *
-*     =jogardados        - DAD_JogaDados( <Int> )
+*     =jogardados - DAD_JogaDados( <Int> )
 *
 ***************************************************************************/
 
@@ -44,11 +44,11 @@ int dados[4] = {NULL, NULL, NULL, NULL};
 
 /***********************************************************************
 *
-*  $FC Função: TARV Efetuar operações de teste específicas para árvore
+*  $FC Função: TDAD Efetuar operações de teste específicas para dado
 *
 *  $ED Descrição da função
 *     Efetua os diversos comandos de teste específicos para o módulo
-*     árvore sendo testado.
+*     dado sendo testado.
 *
 *  $EP Parâmetros
 *     $P ComandoTeste - String contendo o comando
