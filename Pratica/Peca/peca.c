@@ -20,11 +20,11 @@
 
 /***********************************************************************
 *
-*  $TC Tipo de dados: PEC Descritor do nó da árvore
+*  $TC Tipo de dados: PEC Descritor de peça
 *
 *
 *  $ED Descrição do tipo
-*     Descreve a organização do nó
+*     Descreve a organização da peça
 *
 ***********************************************************************/
 
