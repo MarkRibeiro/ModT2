@@ -65,7 +65,7 @@ typedef enum {
 *     DP_CondRetFaltouMemoria
 *
 ***********************************************************************/
-DP_tpCondRet criaDadosPontos(void);
+DP_tpCondRet DP_criaDadosPontos(void);
 
 /***********************************************************************
 *
@@ -81,7 +81,7 @@ DP_tpCondRet criaDadosPontos(void);
 *	  DP_CondRetValorMaximoDado
 *
 ***********************************************************************/
-DP_tpCondRet dobraValor(int jogador);
+DP_tpCondRet DP_dobraValor(int jogador);
 
 /***********************************************************************
 *
@@ -96,7 +96,7 @@ DP_tpCondRet dobraValor(int jogador);
 *     DP_CondRetJogadorInvalido
 *
 ***********************************************************************/
-DP_tpCondRet modificaPontos(int valor, int jogador);
+DP_tpCondRet DP_modificaPontos(int valor, int jogador);
 
 /***********************************************************************
 *
@@ -111,7 +111,7 @@ DP_tpCondRet modificaPontos(int valor, int jogador);
 *     DP_CondRetJogadorInvalido
 *
 ***********************************************************************/
-DP_tpCondRet lerPontos(int jogador, int *val);
+DP_tpCondRet DP_lerPontos(int jogador, int *val);
 
 /***********************************************************************
 *
@@ -125,7 +125,7 @@ DP_tpCondRet lerPontos(int jogador, int *val);
 *	  DP_CondRetNaoExiste
 *
 ***********************************************************************/
-DP_tpCondRet lerValorDadosPontos(int *val);
+DP_tpCondRet DP_lerValorDadosPontos(int *val);
 
 /***********************************************************************
 *
@@ -139,7 +139,7 @@ DP_tpCondRet lerValorDadosPontos(int *val);
 *	  DP_CondRetNaoExiste
 *
 ***********************************************************************/
-DP_tpCondRet lerUltimoJogador(int *val);
+DP_tpCondRet DP_lerUltimoJogador(int *val);
 
 /***********************************************************************
 *
@@ -153,4 +153,4 @@ DP_tpCondRet lerUltimoJogador(int *val);
 *	  DP_CondRetNaoExiste
 *
 ***********************************************************************/
-DP_tpCondRet destroiDadosPontos(void);
+DP_tpCondRet DP_destroiDadosPontos(void);

@@ -22,13 +22,13 @@
 *  $EIU Interface com o usuário pessoa
 *     Comandos de teste específicos para testar o módulo DadosPontos:
 *
-*    "=criar"                   criaDadosPontos(void)
-*    "=dobra"                   dobraValor(int jogador)
-*    "=modPontos"               modificaPontos(int valor, int jogador)
-*    "=lerPontos"               lerPontos(int jogador, int *val)
-*    "=lerDP"                   lerValorDadosPontos(int *val)
-*    "=lerUltimoJogador"        lerUltimoJogador(int *val)
-*    "=destruir"                destroiDadosPontos(void)
+*    "=criar"                   DP_criaDadosPontos(void)
+*    "=dobra"                   DP_dobraValor(int jogador)
+*    "=modPontos"               DP_modificaPontos(int valor, int jogador)
+*    "=lerPontos"               DP_lerPontos(int jogador, int *val)
+*    "=lerDP"                   DP_lerValorDadosPontos(int *val)
+*    "=lerUltimoJogador"        DP_lerUltimoJogador(int *val)
+*    "=destruir"                DP_destroiDadosPontos(void)
 *
 ***************************************************************************/
 
@@ -80,7 +80,7 @@
                return TST_CondRetParm ;
             }
 
-            CondRetObtido = criaDadosPontos( ) ;
+            CondRetObtido = DP_criaDadosPontos( ) ;
 
             return TST_CompararInt( CondRetEsperada , CondRetObtido ,
                                     "Retorno errado ao criar DadosPontos." );
@@ -99,7 +99,7 @@
                return TST_CondRetParm ;
             }
 
-            CondRetObtido = dobraValor( ValorDado ) ;
+            CondRetObtido = DP_dobraValor( ValorDado ) ;
 
             return TST_CompararInt( CondRetEsperada , CondRetObtido ,
                                     "Retorno errado ao dobrar dados pontos." );
@@ -118,7 +118,7 @@
                return TST_CondRetParm ;
             }
 
-            CondRetObtido = modificaPontos( ValorDado, ValorDado_2 ) ;
+            CondRetObtido = DP_modificaPontos( ValorDado, ValorDado_2 ) ;
 
             return TST_CompararInt( CondRetEsperada , CondRetObtido ,
                                     "Retorno errado ao modificar pontos." );
@@ -136,7 +136,7 @@
 				 return TST_CondRetParm;
 			 }
 
-			 CondRetObtido = lerPontos(ValorDado, &ValorObtido);
+			 CondRetObtido = DP_lerPontos(ValorDado, &ValorObtido);
 
 			 Ret = TST_CompararInt(CondRetEsperada, CondRetObtido,
 				 "Retorno errado ao ler pontos.");
@@ -163,7 +163,7 @@
 				 return TST_CondRetParm;
 			 }
 
-			 CondRetObtido = lerValorDadosPontos(&ValorObtido);
+			 CondRetObtido = DP_lerValorDadosPontos(&ValorObtido);
 
 			 Ret = TST_CompararInt(CondRetEsperada, CondRetObtido,
 				 "Retorno errado ao ler valor do dados pontos.");
@@ -188,7 +188,7 @@
 				 return TST_CondRetParm;
 			 }
 
-			 CondRetObtido = lerUltimoJogador(&ValorObtido);
+			 CondRetObtido = DP_lerUltimoJogador(&ValorObtido);
 
 			 Ret = TST_CompararInt(CondRetEsperada, CondRetObtido,
 				 "Retorno errado ao ler ultimo jogador a dobrar.");
@@ -212,7 +212,7 @@
                return TST_CondRetParm ;
             }
 
-            CondRetObtido = destroiDadosPontos( ) ;
+            CondRetObtido = DP_destroiDadosPontos( ) ;
 
             return TST_CompararInt( CondRetEsperada , CondRetObtido ,
                                     "Retorno errado ao criar DadosPontos." );

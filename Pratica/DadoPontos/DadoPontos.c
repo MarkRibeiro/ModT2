@@ -40,10 +40,10 @@ struct dadosPontos {
 //Dado encapsulado
 static DadosPontos * dp = NULL;
 
-DP_tpCondRet criaDadosPontos(void)
+DP_tpCondRet DP_criaDadosPontos(void)
 {
 	if (dp != NULL) {
-		destroiDadosPontos();
+		DP_destroiDadosPontos();
 	}
 
 	dp = (DadosPontos *)malloc(sizeof(DadosPontos));
@@ -66,7 +66,7 @@ DP_tpCondRet criaDadosPontos(void)
 	return DP_CondRetOk;
 }
 
-DP_tpCondRet dobraValor(int jogador)
+DP_tpCondRet DP_dobraValor(int jogador)
 {
 	if (dp == NULL)
 	{
@@ -106,7 +106,7 @@ DP_tpCondRet dobraValor(int jogador)
 	return DP_CondRetOk;
 }
 
-DP_tpCondRet lerPontos(int jogador, int *val)
+DP_tpCondRet DP_lerPontos(int jogador, int *val)
 {
 	if (dp == NULL)
 	{
@@ -131,7 +131,7 @@ DP_tpCondRet lerPontos(int jogador, int *val)
 
 }
 
-DP_tpCondRet lerValorDadosPontos(int *val)
+DP_tpCondRet DP_lerValorDadosPontos(int *val)
 {
 	if (dp == NULL) {
 		return DP_CondRetNaoExiste;
@@ -140,7 +140,7 @@ DP_tpCondRet lerValorDadosPontos(int *val)
 	return DP_CondRetOk;
 }
 
-DP_tpCondRet lerUltimoJogador(int *val)
+DP_tpCondRet DP_lerUltimoJogador(int *val)
 {
 	if (dp == NULL) {
 		return DP_CondRetNaoExiste;
@@ -149,7 +149,7 @@ DP_tpCondRet lerUltimoJogador(int *val)
 	return DP_CondRetOk;
 }
 
-DP_tpCondRet modificaPontos(int valor, int jogador)
+DP_tpCondRet DP_modificaPontos(int valor, int jogador)
 {
 	if (dp == NULL) {
 		return DP_CondRetNaoExiste;
@@ -173,7 +173,7 @@ DP_tpCondRet modificaPontos(int valor, int jogador)
 
 }
 
-DP_tpCondRet destroiDadosPontos()
+DP_tpCondRet DP_destroiDadosPontos()
 {
 	if (dp == NULL) {
 		return DP_CondRetNaoExiste;
