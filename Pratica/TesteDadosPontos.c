@@ -1,3 +1,37 @@
+/***************************************************************************
+*
+*  $MCI Módulo de implementação: Módulo DadosPontos
+*
+*  Arquivo gerado:              TestaDadosPontos.C
+*  Letras identificadoras:      DP
+*
+*  Projeto: Disciplina INF 1301
+*  Gestor:  DI/PUC-Rio
+*  Autores: cgm - Caio Graça Melo
+*			mr - Mark Ribeiro
+*			lb - Lucca Buffara
+*
+*  $HA Histórico de evolução:
+*     Versão  Autor    Data    Observações
+*       1.00   lb   8/05/2019  Começo da implementacao
+*       2.00   lb   10/05/2019 Final do desenvolvimento
+*
+*  $ED Descrição do módulo
+*     Este módulo implementa um lançamento o DadosPontos
+*
+*  $EIU Interface com o usuário pessoa
+*     Comandos de teste específicos para testar o módulo DadosPontos:
+*
+*    "=criar"                   criaDadosPontos(void)
+*    "=dobra"                   dobraValor(int jogador)
+*    "=modPontos"               modificaPontos(int valor, int jogador)
+*    "=lerPontos"               lerPontos(int jogador, int *val)
+*    "=lerDP"                   lerValorDadosPontos(int *val)
+*    "=lerUltimoJogador"        lerUltimoJogador(int *val)
+*    "=destruir"                destroiDadosPontos(void)
+*
+***************************************************************************/
+
 #include    <string.h>
 #include    <stdio.h>
 
@@ -34,7 +68,7 @@
 
       TST_tpCondRet Ret ;
 
-      /* Testar ARV Criar DadosPontos */
+      /* Testar Criar DadosPontos */
 
          if ( strcmp( ComandoTeste , CRIAR_DP) == 0 )
          {
