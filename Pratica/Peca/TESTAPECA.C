@@ -1,3 +1,31 @@
+/***************************************************************************
+*  $MCD Módulo de definição: Módulo dado
+*
+*  Arquivo gerado:              TESTAPECA.C
+*  Letras identificadoras:      PEC
+*
+*  Projeto: Disciplina INF 1301
+*  Gestor:  DI/PUC-Rio
+*  Autores: mr - Mark Ribeiro
+*
+*  $HA Histórico de evolução:
+*     Versão  Autor    Data    Observações
+*       3.00   mr   11/05/2019 Documentação
+*       2.00   mr   05/05/2019 Final do desenvolvimento
+*       1.00   mr   27/04/2019 Início do desenvolvimento
+*
+*  $ED Descrição do módulo
+*     Este módulo implementa um conjunto simples de funções para criar, 
+*     destruir ou obter a cor de uma peça.
+*
+*  $EIU Interface com o usuário pessoa
+*     Comandos de teste específicos para testar o módulo árvore:
+*
+*     "=criarpeca" - PEC_CriaPeca(<Peca>, <char>)          
+*	  "=obterpeca" - PEC_ObterCorPeca(<Peca>, <char>)         
+*	  "=destruirpeca" - PEC_DestroiPeca(<Peca>)
+*
+***************************************************************************/
 #include    <string.h>
 #include    <stdio.h>
 
@@ -8,11 +36,28 @@
 
 #include    "PECA.H"
 
+/* Tabela dos nomes dos comandos de teste específicos */
 
 #define     CRIAR_PEC_CMD          "=criarpeca"
 #define     OBTER_PEC_CMD          "=obterpeca"
 #define     DESTROI_PEC_CMD        "=destruirpeca"
+/*****  Código das funções exportadas pelo módulo  *****/
 
+/***********************************************************************
+*
+*  $FC Função: TDAD Efetuar operações de teste específicas para peça
+*
+*  $ED Descrição da função
+*     Efetua os diversos comandos de teste específicos para o módulo
+*     peça sendo testado.
+*
+*  $EP Parâmetros
+*     $P ComandoTeste - String contendo o comando
+*
+*  $FV Valor retornado
+*     Ver TST_tpCondRet definido em TST_ESPC.H
+*
+***********************************************************************/
 Peca *pecas[2] = {NULL, NULL};
 
    TST_tpCondRet TST_EfetuarComando( char * ComandoTeste )
@@ -116,3 +161,4 @@ Peca *pecas[2] = {NULL, NULL};
 
       return TST_CondRetNaoConhec ;
    } //Fim função: TPEC Efetuar operações de teste específicas para peça
+/********** Fim do módulo de implementação: Módulo de teste específico **********/
