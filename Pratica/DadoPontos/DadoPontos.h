@@ -1,8 +1,8 @@
 /***************************************************************************
 *
-*  $MCD Módulo de definição: Módulo DadosPontos
+*  $MCD Módulo de definição: Módulo DadoPontos
 *
-*  Arquivo gerado:              TestaDadosPontos.C
+*  Arquivo gerado:              TestaDadoPontos.C
 *  Letras identificadoras:      DP
 *
 *  Projeto: Disciplina INF 1301
@@ -17,7 +17,7 @@
 *       2.00   lb   10/05/2019 Final do desenvolvimento
 *
 *  $ED Descrição do módulo
-*     Este módulo implementa um lançamento o DadosPontos
+*     Este módulo implementa um lançamento o DadoPontos
 *
 ***************************************************************************/
 #include<stdio.h>

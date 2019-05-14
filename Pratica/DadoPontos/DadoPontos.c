@@ -1,8 +1,8 @@
 /***************************************************************************
 *
-*  $MCI Módulo de implementação: Módulo DadosPontos
+*  $MCI Módulo de implementação: Módulo DadoPontos
 *
-*  Arquivo gerado:              TestaDadosPontos.C
+*  Arquivo gerado:              TestaDadoPontos.C
 *  Letras identificadoras:      DP
 *
 *  Projeto: Disciplina INF 1301
@@ -13,11 +13,11 @@
 *
 *  $HA Histórico de evolução:
 *     Versão  Autor    Data    Observações
-*       1.00   lb   8/05/2019 Começo da implementacao
+*       1.00   lb   8/05/2019  Começo da implementacao
 *       2.00   lb   10/05/2019 Final do desenvolvimento
 *
 *  $ED Descrição do módulo
-*     Este módulo implementa um lançamento o DadosPontos
+*     Este módulo implementa o modulo DadoPontos
 *
 ***************************************************************************/
 
