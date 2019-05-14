@@ -1,3 +1,26 @@
+/***************************************************************************
+*
+*  $MCI Módulo de implementação: Módulo DadosPontos
+*
+*  Arquivo gerado:              TestaDadosPontos.C
+*  Letras identificadoras:      DP
+*
+*  Projeto: Disciplina INF 1301
+*  Gestor:  DI/PUC-Rio
+*  Autores: cgm - Caio Graça Melo
+*			mr - Mark Ribeiro
+*			lb - Lucca Buffara
+*
+*  $HA Histórico de evolução:
+*     Versão  Autor    Data    Observações
+*       1.00   lb   8/05/2019 Começo da implementacao
+*       2.00   lb   10/05/2019 Final do desenvolvimento
+*
+*  $ED Descrição do módulo
+*     Este módulo implementa um lançamento o DadosPontos
+*
+***************************************************************************/
+
 #include "DadosPontos.h"
 
 struct dadosPontos {
@@ -50,7 +73,7 @@ DP_tpCondRet dobraValor(int jogador)
 		return DP_CondRetNaoExiste;
 	}
 
-	//Verifica se ID do jogador � valido
+	//Verifica se ID do jogador � valido
 	if (jogador != 1 && jogador != 2) {
 		printf("ID do jogador invalido! Deve ser 1 ou 2\n");
 		return DP_CondRetJogadorInvalido;
@@ -67,11 +90,11 @@ DP_tpCondRet dobraValor(int jogador)
 
 	//Verifica se jogador pode dobrar os pontos
 	if (dp->ultimo_jogador == jogador) {
-		printf("Este jogador n�o pode dobrar a pontuacao!\n");
+		printf("Este jogador n�o pode dobrar a pontuacao!\n");
 		return DP_CondRetJogadorNaoPodeDobrar;
 	}
 
-	//Verifica se valor do multiplicador � maximo
+	//Verifica se valor do multiplicador � maximo
 	if (dp->mult == 64) {
 		printf("Valor maximo do dado atingido!\n");
 		return DP_CondRetValorMaximoDado;
@@ -90,7 +113,7 @@ DP_tpCondRet lerPontos(int jogador, int *val)
 		return DP_CondRetNaoExiste;
 	}
 
-	//Verifica se ID do jogador � valido
+	//Verifica se ID do jogador � valido
 	if (jogador != 1 && jogador != 2) {
 		printf("ID do jogador invalido! Deve ser 1 ou 2\n");
 		return DP_CondRetJogadorInvalido;
@@ -132,7 +155,7 @@ DP_tpCondRet modificaPontos(int valor, int jogador)
 		return DP_CondRetNaoExiste;
 	}
 
-	//Verifica se ID do jogador � valido
+	//Verifica se ID do jogador � valido
 	if (jogador != 1 && jogador != 2) {
 		printf("ID do jogador invalido! Deve ser 1 ou 2\n");
 		return DP_CondRetJogadorInvalido;

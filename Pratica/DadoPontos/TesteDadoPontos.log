@@ -1,7 +1,7 @@
 
 !!! Inicio dos testes
-!!!      Construto sob teste: TesteDadosPontos.exe
-!!!      Script de teste:     TesteDadosPontos.script
+!!!      Construto sob teste: TRAB2-3.exe
+!!!      Script de teste:     TesteDadoPontos.script
 
     1  == Verifica todas funcoes sem criar dados pontos
     9  == Cria DadosPontos e id de jogador errado é passado

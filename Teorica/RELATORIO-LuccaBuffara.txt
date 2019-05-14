@@ -1,0 +1,12 @@
+﻿RELATÓRIO INDIVIDUAL TRABALHO 1 DE MODULAR
+- Lucca Buffara de Almeida
+Data	Horas Trabalhadas	    Tipo Tarefa								Descrição da Tarefa Realizada
+--------------------------------------------------------------------------------------------------------------------------------------------
+5/5/2019	2hrs		    Desenvolvimento DadosPontos						Comeco do desnevolvimento DadosPontos
+--------------------------------------------------------------------------------------------------------------------------------------------
+10/5/2019	3hrs		    Desenvolvimento DadosPontos						Finalizacao de DadosPontos e Teste utilizando arcabouço de testes
+--------------------------------------------------------------------------------------------------------------------------------------------
+11/5/2019	20min 		    LeiaME.txt								Escrita do LeiaMe.txt
+--------------------------------------------------------------------------------------------------------------------------------------------
+11/5/2019	1hr		    Criacao dos executaveis e batches DadosPontos, Peca e Dado 		Finalizacao de DadosPontos e Teste utilizando arcabouço de testes
+--------------------------------------------------------------------------------------------------------------------------------------------
